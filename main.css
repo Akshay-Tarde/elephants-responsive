@@ -36,21 +36,32 @@ img {
 
 .columns {
   display: flex;
+  justify-content: space-between;
   color: #707070;
   margin: 1em 0;
 }
+@media (max-width: 600px) {
+  .columns {
+    flex-direction: column;
+  }
+}
 
 .col-1 {
-  width: 25%;
+  width: 20%;
 }
 .col-2 {
-  width: 50%;
+  width: 45%;
 }
 .col-3 {
-  width: 75%;
+  width: 70%;
 }
-.col .col {
-  margin-right: 1.5rem;
+
+@media (max-width: 600px) {
+  .col-1,
+  .col-2,
+  .col-3 {
+    width: 100%;
+  }
 }
 
 .text {
